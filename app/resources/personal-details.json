@@ -1,0 +1,22 @@
+[
+    {
+        "name": "Name",
+        "value": "Marek Baranowski"
+    },
+    {
+        "name": "Date of birth",
+        "value": "28.08.1991"
+    },
+    {
+        "name": "Location",
+        "value": "Wrocław, Poland"
+    },
+    {
+        "name": "Telephone",
+        "value": "+48 695 465 608"
+    },
+    {
+        "name": "E-mail",
+        "value": "baranowski.mt@gmail.com"
+    }
+]

@@ -27,11 +27,15 @@ angular
                 templateUrl: 'views/skills.html',
                 controller: 'SkillsCtrl'
             })
-            .when('/about', {
-                templateUrl: 'views/about.html',
-                controller: 'AboutCtrl'
+            .when('/work-experience', {
+                templateUrl: 'views/work-experience.html',
+                controller: 'WorkExperienceCtrl'
             })
             .otherwise({
-                redirectTo: '/home'
+                redirectTo: '/personal-details'
             });
+
+    })
+    .run(function ($rootScope, $location) {
+        $rootScope.location = $location;
     });

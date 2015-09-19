@@ -5,23 +5,11 @@
  * @name cvApp.controller:SkillsCtrl
  * @description
  * # SkillsCtrl
- * Controller of the cvApp
+ * Controller dedicated for the 'Skills' view
  */
 angular.module('cvApp')
-    .controller('SkillsCtrl', function ($scope) {
-        $scope.skillGroups = [
-            {
-                "title": "General skills",
-                "skills": ["Javascript", "Java", "HTML", "CSS", "Knowledge of databases (SQL, NoSQL)"]
-            },
-            {
-                "title": "Frameworks and libraries",
-                "skills": ["AngularJS", "Backbone.js + Thorax.js", "jQuery", "Dojo", "Sass", "Twitter Bootstrap",
-                    "Play framework", "SpringMVC", "IBM WebSphere Commerce + Struts", "Hibernate"]
-            },
-            {
-                "title": "Tools",
-                "skills": ["Grunt", "Bower", "Yeoman", "Git, Subversion", "Jenkins, Maven"]
-            }
-        ];
+    .controller('SkillsCtrl', function ($scope, skillgroups) {
+        skillgroups.query(function (data) {
+            $scope.skillGroups = data;
+        });
     });

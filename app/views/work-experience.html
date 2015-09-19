@@ -1,1 +1,10 @@
-<p>This is the work-experience view.</p>
+<header class="page-header"><h1>Work experience</h1></header>
+<article ng-repeat="work in workList">
+    <header>
+        <h2>{{work.time}}</h2>
+
+        <p class="lead">{{work.position}} at <strong>{{work.company}}</strong></p>
+    </header>
+    <p ng-bind-html="work.description"></p>
+    <hr>
+</article>

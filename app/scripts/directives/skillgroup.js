@@ -5,6 +5,7 @@
  * @name cvApp.directive:skillgroup
  * @description
  * # skillgroup
+ * Directive that shows group of skills
  */
 angular.module('cvApp')
     .directive('skillgroup', function () {
@@ -12,9 +13,7 @@ angular.module('cvApp')
             templateUrl: '../views/skillgroup.html',
             restrict: 'E',
             scope: {
-                skillGroup: "=group"
-            },
-            link: function postLink(scope, element, attrs) {
+                skillGroup: '=group'
             }
         };
     });

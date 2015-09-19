@@ -5,13 +5,11 @@
  * @name cvApp.controller:WorkExperienceCtrl
  * @description
  * # WorkExperienceCtrl
- * Controller of the cvApp
+ * Controller dedicated for the 'Work experience' view
  */
 angular.module('cvApp')
-  .controller('WorkExperienceCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+    .controller('WorkExperienceCtrl', function ($scope, workList) {
+        workList.query(function (data) {
+            $scope.workList = data;
+        });
+    });
