@@ -1,0 +1,20 @@
+[
+    {
+        "position": "Creator",
+        "company": "MindKeeper",
+        "time": "May 2015 - ...",
+        "description": "<p><strong>MindKeeper</strong> is my free-time, individual project that aims to be the ‘sticky-notes’ like application for personal notes. I decided to develop it as I am not satisfied with available solutions, such as Google Keep or Evernote.</p><p>The app is made with such technologies as Angular (framework), Sass (stylesheet language), Firebase.com (data storage), Bower (dependency management), Grunt (enhancing frontend development workflow). <strong>MindKeeper</strong> is designed to work on desktop and mobile devices.</p><p>Demo of current pre-alpha version can be seen at <a href='http://mindkeeper.io'>mindkeeper.io</a>.</p>"
+    },
+    {
+        "position": "Software Developer",
+        "company": "Grupa Exorigo-Upos",
+        "time": "May 2014 - ...",
+        "description": "<p>Development of new version of one of the biggest online shops in Poland - <strong>Merlin.pl</strong>. The project is based on IBM WebSphere Commerce platform. I was responsible for backend development (with technologies such as Java, Struts framework and DB2 database) as well as frontend development that includes technologies: HTML, CSS, Javascript (main JS libraries used - Dojo toolkit, jQuery).</p><p>The project is not yet released.</p>"
+    },
+    {
+        "position": "Software Developer",
+        "company": "Fast White Cat S.A.",
+        "time": "November 2013 - May 2014",
+        "description": "<p>Development of e-commerce applications using such technologies as  IBM WebSphere Commerce, Java, Struts framework, Dojo, DB2 database, Git.</p><p><strong>Main project:</strong> <a href='http://voxnabytek.cz'>www.voxnabytek.cz</a><p>Development, release and maintenance of online shop for Polish furniture manufacturer. The shop was designed for Czech Republic market.</p>"
+    }
+]

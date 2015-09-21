@@ -1,0 +1,49 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8">
+    <title>Curriculum Vitae</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="styles/main.1248e245.css">
+</head>
+<body ng-app="cvApp" ng-controller="MainCtrl">
+<!--[if lt IE 7]>
+<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+    your browser</a> to improve your experience.</p>
+<![endif]-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#/{{navigationLinks[0].link}}">Curriculum Vitae</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li ng-repeat="link in navigationLinks" ng-class="{'active': location.path() == link.link}" ng-cloak>
+                    <a ng-href="#{{link.link}}">{{link.title}} <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div ng-view=""></div>
+</div>
+
+<!--[if lt IE 9]>
+<script src="scripts/oldieshim.f0455532.js"></script>
+<![endif]-->
+
+<script src="scripts/vendor.9abde354.js"></script>
+
+<script src="scripts/scripts.6cb72826.js"></script>
+</body>
+</html>

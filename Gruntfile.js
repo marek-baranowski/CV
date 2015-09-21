@@ -267,6 +267,13 @@ module.exports = function (grunt) {
     //   dist: {}
     // },
 
+ 	uglify: {
+      options: {
+      	mangle: false,
+      	beautify: true
+      }
+    },
+
     imagemin: {
       dist: {
         files: [{
@@ -341,7 +348,37 @@ module.exports = function (grunt) {
             '*.html',
             'views/{,*/}*.html',
             'images/{,*/}*.{webp}',
-            'fonts/{,*/}*.*'
+            'fonts/{,*/}*.*',
+        	'resources/{,*/}*.*'
+          ]
+        }, {
+          expand: true,
+          cwd: '.tmp/images',
+          dest: '<%= yeoman.dist %>/images',
+          src: ['generated/*']
+        }, {
+          expand: true,
+          cwd: '.',
+          src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
+          dest: '<%= yeoman.dist %>'
+        }]
+      },
+      build_dev: {
+        files: [{
+          expand: true,
+          dot: true,
+          cwd: '<%= yeoman.app %>',
+          dest: '<%= yeoman.dist %>',
+          src: [
+            '*.{ico,png,txt}',
+            '.htaccess',
+            '*.html',
+            'views/{,*/}*.html',
+            'images/{,*/}*.{webp}',
+            'fonts/{,*/}*.*',
+        	'resources/{,*/}*.*',
+        	'scripts/{,*/}*.*',
+        	'<%= yeoman.app %>/.tmp/{,*/}*.*'
           ]
         }, {
           expand: true,
@@ -359,6 +396,12 @@ module.exports = function (grunt) {
         expand: true,
         cwd: '<%= yeoman.app %>/styles',
         dest: '.tmp/styles/',
+        src: '{,*/}*.css'
+      },
+      styles_dev: {
+        expand: true,
+        cwd: '.tmp/styles',
+        dest: '<%= yeoman.dist %>/styles',
         src: '{,*/}*.css'
       }
     },
@@ -438,4 +481,21 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
+
+  grunt.registerTask('build-dev', [
+    'clean:dist',
+    'wiredep',
+    'useminPrepare',
+    'concurrent:dist',
+    'autoprefixer',
+    'concat',
+    'ngAnnotate',
+    'copy:dist',
+    'cdnify',
+	'copy:styles_dev',
+    'uglify',
+    'filerev',
+    'usemin'
+  ]);
+
 };
